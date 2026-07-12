@@ -147,6 +147,23 @@ $ git commit -m "merge: resolve conflict in app.py"
 
 ## 场景四：分支开发 — 在独立线路上工作
 
+### 查看当前有哪些分支
+
+在进行任何分支操作之前，先了解当前仓库的分支状况是一个好习惯：
+
+```bash
+$ git branch
+* main
+```
+
+`*` 号表示当前所在的活跃分支。如果你想查看远程仓库的所有分支，可以加上 `-a` 参数：
+
+```bash
+$ git branch -a
+* main
+  remotes/origin/main
+```
+
 ### 新建功能分支
 
 当你要开发一个新功能（比如增加用户登录模块），不要在 `main` 上直接改，而是新建一个分支：
